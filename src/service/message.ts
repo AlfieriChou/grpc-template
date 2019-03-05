@@ -16,7 +16,7 @@ class Message implements IMessageServiceServer {
     callback: sendUnaryData<MessageResponse>
   ): void {
     const res: MessageResponse = new MessageResponse()
-    console.log('------>', call.request.toObject())
+    console.log('[gRPC]: ', call.request.toObject())
     if (call.request.toObject()) {
       const data: IMessage = call.request.toObject()
       res.setMessageId(data.messageId)
