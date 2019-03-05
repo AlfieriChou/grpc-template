@@ -1,9 +1,9 @@
 ##############################################################
 PROTOC_GEN_TS_PATH := ./node_modules/.bin/protoc-gen-ts
-OUT_DIR := ./src/model/
-PROTO_DIR := ./src/proto
+OUT_DIR := ./model/
+PROTO_DIR := ./proto
 
-proto:
+protogen:
 	@protoc \
 		--js_out="import_style=commonjs,binary:$(OUT_DIR)" \
 		--plugin="protoc-gen-ts=$(PROTOC_GEN_TS_PATH)" \
