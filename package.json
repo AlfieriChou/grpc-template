@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "Node gRPC template for typescript.",
   "scripts": {
-    "server": "ts-node ./src/server.ts",
-    "client": "ts-node ./src/client.ts",
+    "server": "node ./build/server.js",
+    "client": "node ./build/client.js",
     "proto": "node ./bin/proto.js",
-    "format": "prettier --write \"**/*.ts\" \"**/*.js\""
+    "tslint-check": "tslint-config-prettier-check ./tslint.json",
+    "format": "prettier --write \"**/*.ts\" \"**/*.js\"",
+    "build": "tsc -p tsconfig.json"
   },
   "husky": {
     "hooks": {
