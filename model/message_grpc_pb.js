@@ -1,35 +1,49 @@
 // GENERATED CODE -- DO NOT EDIT!
 
-'use strict';
-var grpc = require('grpc');
-var message_pb = require('./message_pb.js');
+'use strict'
+var grpc = require('grpc')
+var message_pb = require('./message_pb.js')
 
-function serialize_message_AddMessageRequest(arg) {
-  if (!(arg instanceof message_pb.AddMessageRequest)) {
-    throw new Error('Expected argument of type message.AddMessageRequest');
+function serialize_message_MessageRequest(arg) {
+  if (!(arg instanceof message_pb.MessageRequest)) {
+    throw new Error('Expected argument of type message.MessageRequest')
   }
-  return Buffer.from(arg.serializeBinary());
+  return Buffer.from(arg.serializeBinary())
 }
 
-function deserialize_message_AddMessageRequest(buffer_arg) {
-  return message_pb.AddMessageRequest.deserializeBinary(new Uint8Array(buffer_arg));
+function deserialize_message_MessageRequest(buffer_arg) {
+  return message_pb.MessageRequest.deserializeBinary(new Uint8Array(buffer_arg))
 }
 
+function serialize_message_MessageResponse(arg) {
+  if (!(arg instanceof message_pb.MessageResponse)) {
+    throw new Error('Expected argument of type message.MessageResponse')
+  }
+  return Buffer.from(arg.serializeBinary())
+}
+
+function deserialize_message_MessageResponse(buffer_arg) {
+  return message_pb.MessageResponse.deserializeBinary(
+    new Uint8Array(buffer_arg)
+  )
+}
 
 // ---------------Message service-------------------
 //
-var MessageServiceService = exports.MessageServiceService = {
+var MessageServiceService = (exports.MessageServiceService = {
   addMessage: {
     path: '/message.MessageService/addMessage',
     requestStream: false,
     responseStream: false,
-    requestType: message_pb.AddMessageRequest,
-    responseType: message_pb.AddMessageRequest,
-    requestSerialize: serialize_message_AddMessageRequest,
-    requestDeserialize: deserialize_message_AddMessageRequest,
-    responseSerialize: serialize_message_AddMessageRequest,
-    responseDeserialize: deserialize_message_AddMessageRequest,
-  },
-};
+    requestType: message_pb.MessageRequest,
+    responseType: message_pb.MessageResponse,
+    requestSerialize: serialize_message_MessageRequest,
+    requestDeserialize: deserialize_message_MessageRequest,
+    responseSerialize: serialize_message_MessageResponse,
+    responseDeserialize: deserialize_message_MessageResponse
+  }
+})
 
-exports.MessageServiceClient = grpc.makeGenericClientConstructor(MessageServiceService);
+exports.MessageServiceClient = grpc.makeGenericClientConstructor(
+  MessageServiceService
+)

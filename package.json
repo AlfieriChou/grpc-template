@@ -6,6 +6,11 @@
     "proto": "node ./bin/proto.js",
     "format": "prettier --write \"**/*.ts\" \"**/*.js\""
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "repository": "https://github.com/AlfieriChou/grpc-template",
   "author": "AlfieriChou <alfierichou@gmail.com>",
   "license": "MIT",
