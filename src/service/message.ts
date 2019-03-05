@@ -5,15 +5,23 @@ import {
 import { MessageRequest, MessageResponse } from '../../model/message_pb'
 import { ServerUnaryCall, sendUnaryData } from 'grpc'
 
+interface IMessage {
+  messageId: string
+  messageType: string
+}
+
 class Message implements IMessageServiceServer {
   public addMessage(
     call: ServerUnaryCall<MessageRequest>,
     callback: sendUnaryData<MessageResponse>
   ): void {
     const res: MessageResponse = new MessageResponse()
-    res.setMessageId = call.request.getMessageId
-    res.setMessageType = call.request.getMessageType
-    console.log('------>', res)
+    console.log('------>', call.request.toObject())
+    if (call.request.toObject()) {
+      const data: IMessage = call.request.toObject()
+      res.setMessageId(data.messageId)
+      res.setMessageType(data.messageType)
+    }
     callback(null, res)
   }
 }

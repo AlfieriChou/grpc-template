@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Node gRPC template for typescript.",
   "scripts": {
+    "server": "ts-node ./src/server.ts",
+    "client": "ts-node ./src/client.ts",
     "proto": "node ./bin/proto.js",
     "format": "prettier --write \"**/*.ts\" \"**/*.js\""
   },
@@ -27,7 +29,8 @@
     "ts-node": "^8.0.2",
     "tslint": "^5.13.1",
     "tslint-config-prettier": "^1.18.0",
-    "tslint-plugin-prettier": "^2.0.1"
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.3.3333"
   },
   "dependencies": {
     "google-protobuf": "^3.7.0",
