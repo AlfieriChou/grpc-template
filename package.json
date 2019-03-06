@@ -6,6 +6,7 @@
     "server": "node ./build/server.js",
     "client": "node ./build/client.js",
     "proto": "node ./bin/proto.js",
+    "cert": "sudo sh ./script/gen-cert.sh",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "format": "prettier --write \"**/*.ts\" \"**/*.js\"",
     "build": "tsc -p tsconfig.json"
