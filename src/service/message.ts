@@ -3,8 +3,8 @@ import {
   MessageServiceService
 } from '../../model/message_grpc_pb'
 import { MessageRequest, MessageResponse } from '../../model/message_pb'
-import { ServerUnaryCall, sendUnaryData, status } from 'grpc'
-import { ServiceError } from 'src/utils/error'
+import { ServerUnaryCall, sendUnaryData } from 'grpc'
+import { NotFound } from 'src/utils/exception'
 
 interface IMessage {
   messageId: string
@@ -19,10 +19,7 @@ class Message implements IMessageServiceServer {
     const res: MessageResponse = new MessageResponse()
     console.log('[gRPC]: ', call.request.toObject())
     if (!call.request.toObject()) {
-      return callback(
-        new ServiceError(status.INVALID_ARGUMENT, 'InvalidValue'),
-        null
-      )
+      return callback(new NotFound(), null)
     }
     const data: IMessage = call.request.toObject()
     res.setMessageId(data.messageId)
