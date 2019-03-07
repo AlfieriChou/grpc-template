@@ -37,6 +37,8 @@
   },
   "dependencies": {
     "google-protobuf": "3.7.0",
-    "grpc": "1.19.0"
+    "grpc": "1.19.0",
+    "winston": "3.2.1",
+    "winston-daily-rotate-file": "3.8.0"
   }
 }
