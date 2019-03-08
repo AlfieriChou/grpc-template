@@ -4,7 +4,7 @@ import {
 } from '../../model/message_grpc_pb'
 import { MessageRequest, MessageResponse } from '../../model/message_pb'
 import { ServerUnaryCall, sendUnaryData } from 'grpc'
-import { NotFound } from '../utils/exception'
+import { NotFound, NotAuthenticated } from '../utils/exception'
 import { logger } from '../utils/logger'
 
 interface IMessage {
@@ -17,6 +17,11 @@ class Message implements IMessageServiceServer {
     call: ServerUnaryCall<MessageRequest>,
     callback: sendUnaryData<MessageResponse>
   ): void {
+    const metadata = call.metadata
+    const metaKey = metadata.get('dis')
+    if (metaKey[0] !== 'what') {
+      return callback(new NotAuthenticated(), null)
+    }
     const res: MessageResponse = new MessageResponse()
     console.log('[gRPC]: ', call.request.toObject())
     logger.info('message: ' + JSON.stringify(call.request.toObject()))

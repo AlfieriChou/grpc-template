@@ -12,6 +12,7 @@ request.setMessageId('dis')
 request.setMessageType('what')
 
 const metadata = new grpc.Metadata()
+metadata.set('dis', 'what')
 
 client.addMessage(request, metadata, (err, data) => {
   if (err) throw err
