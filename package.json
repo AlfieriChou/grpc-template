@@ -5,6 +5,7 @@
   "scripts": {
     "server": "node ./build/server.js",
     "client": "node ./build/client.js",
+    "js:client": "node ./src/client.js",
     "proto": "node ./bin/proto.js",
     "cert": "sudo sh ./script/gen-cert.sh",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
