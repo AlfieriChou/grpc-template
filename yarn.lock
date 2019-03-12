@@ -6,9 +6,9 @@
   version "3.2.7"
   resolved "https://registry.yarnpkg.com/@types/google-protobuf/-/google-protobuf-3.2.7.tgz#9576ed5dd62cdb1c9f952522028a03b7cb2b69b5"
 
-"@types/node@11.10.4":
-  version "11.10.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.10.4.tgz#3f5fc4f0f322805f009e00ab35a2ff3d6b778e42"
+"@types/node@11.11.3":
+  version "11.11.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.11.3.tgz#7c6b0f8eaf16ae530795de2ad1b85d34bf2f5c58"
 
 abbrev@1:
   version "1.1.1"
@@ -897,9 +897,11 @@ google-protobuf@3.7.0, google-protobuf@^3.5.0:
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/google-protobuf/-/google-protobuf-3.7.0.tgz#5c7228b68d24a7c93706c1a44efdb8ee883cea43"
 
-grpc-tools@^1.7.1:
+grpc-tools@1.7.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/grpc-tools/-/grpc-tools-1.7.1.tgz#f353812fd21df057d09cf94d06134c19834ad67c"
+  dependencies:
+    node-pre-gyp "*"
 
 grpc@1.19.0, grpc@^1.16.0:
   version "1.19.0"
