@@ -4,13 +4,13 @@ import { credentials, Metadata, ServiceError } from 'grpc'
 import { readFileSync } from 'fs'
 import { resolve } from 'path'
 
+const rootCerts = readFileSync(resolve(__dirname, '../config/cert/ca.crt'))
+const privateKey = readFileSync(resolve(__dirname, '../config/cert/client.key'))
+const certChain = readFileSync(resolve(__dirname, '../config/cert/client.crt'))
+
 const client: MessageServiceClient = new MessageServiceClient(
-  '0.0.0.0:7000',
-  credentials.createSsl(
-    readFileSync(resolve(__dirname, '../config/cert/ca.crt')),
-    readFileSync(resolve(__dirname, '../config/cert/client.key')),
-    readFileSync(resolve(__dirname, '../config/cert/client.crt'))
-  )
+  'localhost:7000',
+  credentials.createSsl(rootCerts, privateKey, certChain)
 )
 
 interface IMessage {
