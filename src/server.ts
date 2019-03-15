@@ -4,11 +4,11 @@ import { readFileSync } from 'fs'
 import { resolve } from 'path'
 
 let port: number = 7000
-const rootCerts = readFileSync(resolve(__dirname, '../config/cert/ca.crt'))
+const rootCerts = readFileSync(resolve(__dirname, '../config/certs/ca.crt'))
 const keyCertPairs: KeyCertPair[] = [
   {
-    private_key: readFileSync(resolve(__dirname, '../config/cert/server.key')),
-    cert_chain: readFileSync(resolve(__dirname, '../config/cert/server.crt'))
+    private_key: readFileSync(resolve(__dirname, '../config/certs/server.key')),
+    cert_chain: readFileSync(resolve(__dirname, '../config/certs/server.crt'))
   }
 ]
 

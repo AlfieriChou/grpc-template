@@ -7,7 +7,7 @@
     "client": "node ./build/client.js",
     "js:client": "node ./src/client.js",
     "proto": "node ./bin/proto.js",
-    "cert": "sudo sh ./script/gen-cert.sh",
+    "cert": "make cert",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "format": "prettier --write \"**/*.ts\" \"**/*.js\"",
     "build": "tsc -p tsconfig.json"
