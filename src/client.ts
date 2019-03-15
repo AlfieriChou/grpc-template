@@ -1,10 +1,16 @@
 import { MessageServiceClient } from '../model/message_grpc_pb'
 import { MessageRequest, MessageResponse } from '../model/message_pb'
 import { credentials, Metadata, ServiceError } from 'grpc'
+import { readFileSync } from 'fs'
+import { resolve } from 'path'
 
 const client: MessageServiceClient = new MessageServiceClient(
   '0.0.0.0:7000',
-  credentials.createInsecure()
+  credentials.createSsl(
+    readFileSync(resolve(__dirname, '../config/cert/ca.crt')),
+    readFileSync(resolve(__dirname, '../config/cert/client.key')),
+    readFileSync(resolve(__dirname, '../config/cert/client.crt'))
+  )
 )
 
 interface IMessage {
