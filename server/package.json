@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "Node gRPC server template for typescript.",
   "scripts": {
-    "server": "yarn run build && node ./build/server.js",
+    "server": "node ./build/server.js",
     "proto": "node ./bin/proto.js",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "format": "prettier --write \"**/*.ts\" \"**/*.js\"",
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "build:format": "yarn run build && yarn run format"
   },
   "husky": {
     "hooks": {

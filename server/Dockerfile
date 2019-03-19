@@ -14,7 +14,7 @@ RUN apk add --no-cache --virtual .build-deps-yarn curl \
 
 COPY . /root
 
-RUN yarn && yarn run build
+RUN yarn && yarn run build:format
 
 EXPOSE 7000
 

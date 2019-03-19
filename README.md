@@ -9,6 +9,7 @@ Node gRPC template for typescript
 ```bash
 cd server
 yarn
+yarn run build:format
 yarn run server
 ```
 
@@ -17,6 +18,7 @@ yarn run server
 ```bash
 cd client
 yarn
+yarn run build:format
 yarn run client
 ```
 
