@@ -10,7 +10,7 @@ RUN apk add --no-cache --virtual .build-deps-yarn curl \
   && ln -snf /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn \
   && ln -snf /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg \
   && rm yarn-v$YARN_VERSION.tar.gz \
-  && apk del .build-deps-yarn  
+  && apk del .build-deps-yarn
 
 COPY . /root
 
