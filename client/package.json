@@ -1,7 +1,7 @@
 {
-  "name": "grpc-server-template",
+  "name": "grpc-client-template",
   "version": "1.0.0",
-  "description": "Node gRPC server template for typescript.",
+  "description": "Node gRPC client template for typescript.",
   "scripts": {
     "client": "node ./build/client.js",
     "proto": "node ./bin/proto.js",
