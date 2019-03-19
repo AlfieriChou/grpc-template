@@ -8,14 +8,15 @@ Node gRPC template for typescript
 
 ```bash
 cd server
-yarn install
-yarn run build
+yarn
 yarn run server
 ```
 
 - run client
 
 ```bash
+cd client
+yarn
 yarn run client
 ```
 
