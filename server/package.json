@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Node gRPC server template for typescript.",
   "scripts": {
-    "server": "node ./build/server.js",
-    "client": "node ./build/client.js",
+    "server": "yarn run build && node ./build/server.js",
     "proto": "node ./bin/proto.js",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "format": "prettier --write \"**/*.ts\" \"**/*.js\"",
@@ -19,7 +18,6 @@
   "author": "AlfieriChou <alfierichou@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/google-protobuf": "3.2.7",
     "@types/node": "11.11.3",
     "grpc-tools": "1.7.1",
     "grpc_tools_node_protoc_ts": "2.5.0",
@@ -35,7 +33,6 @@
     "typescript": "3.3.3333"
   },
   "dependencies": {
-    "google-protobuf": "3.7.0",
     "grpc": "1.19.0",
     "winston": "3.2.1",
     "winston-daily-rotate-file": "3.8.0"
