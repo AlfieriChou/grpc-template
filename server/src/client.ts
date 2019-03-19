@@ -4,11 +4,9 @@ import { credentials, Metadata, ServiceError } from 'grpc'
 import { readFileSync } from 'fs'
 import { resolve } from 'path'
 
-const rootCerts = readFileSync(resolve(__dirname, '../config/certs/ca.crt'))
-const privateKey = readFileSync(
-  resolve(__dirname, '../config/certs/client.key')
-)
-const certChain = readFileSync(resolve(__dirname, '../config/certs/client.crt'))
+const rootCerts = readFileSync(resolve(__dirname, '../../certs/ca.crt'))
+const privateKey = readFileSync(resolve(__dirname, '../../certs/client.key'))
+const certChain = readFileSync(resolve(__dirname, '../../certs/client.crt'))
 
 const client: MessageServiceClient = new MessageServiceClient(
   'localhost:7000',

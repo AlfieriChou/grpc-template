@@ -2,7 +2,7 @@
 PROTOC_GEN_TS_PATH := ./node_modules/.bin/protoc-gen-ts
 OUT_DIR := ./model/
 PROTO_DIR := ./proto
-CERT_DIR := ./config/certs
+CERT_DIR := ./certs
 
 protogen:
 	@protoc \

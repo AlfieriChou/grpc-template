@@ -7,6 +7,7 @@ Node gRPC template for typescript
 - run server
 
 ```bash
+cd server
 yarn install
 yarn run build
 yarn run server

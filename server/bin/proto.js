@@ -5,7 +5,7 @@ const rimraf = require('rimraf')
 process.env.PATH +=
   path.delimiter + path.join(process.cwd(), 'node_modules', '.bin')
 
-const PROTO_DIR = path.join(__dirname, '../proto')
+const PROTO_DIR = path.join(__dirname, '../../proto')
 const MODEL_DIR = path.join(__dirname, '../model')
 const PROTOC_GEN_TS_PATH = path.join(
   __dirname,
