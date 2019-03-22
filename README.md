@@ -13,7 +13,6 @@ make server-run
 - run client
 
 ```bash
-cd client
 make client-run
 ```
 
