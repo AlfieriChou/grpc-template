@@ -62,3 +62,9 @@ cert:
 		pass:phrase -in \
 		${CERT_DIR}/client.key -out \
 		${CERT_DIR}/client.key
+	@openssl pkcs8 -topk8 -nocrypt -in \
+		${CERT_DIR}/client.key \
+		-out ${CERT_DIR}/client.pem
+	@openssl pkcs8 -topk8 -nocrypt -in \
+		${CERT_DIR}/server.key \
+		-out ${CERT_DIR}/server.pem

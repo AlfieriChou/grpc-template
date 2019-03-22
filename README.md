@@ -7,19 +7,14 @@ Node gRPC template for typescript
 - run server
 
 ```bash
-cd server
-yarn
-yarn run build:format
-yarn run server
+make server-run
 ```
 
 - run client
 
 ```bash
 cd client
-yarn
-yarn run build:format
-yarn run client
+make client-run
 ```
 
 ## The MIT License (MIT)
