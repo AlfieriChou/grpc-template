@@ -4,7 +4,7 @@ WORKDIR /root/server
 
 COPY . /root/server
 
-RUN npm i
+RUN npm i && npm i yarn -g
 
 RUN npm run build:format
 

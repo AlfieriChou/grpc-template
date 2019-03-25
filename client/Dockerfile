@@ -4,7 +4,7 @@ WORKDIR /root/client
 
 COPY . /root/client
 
-RUN npm i
+RUN npm i && npm i yarn -g
 
 RUN npm run build:format
 
