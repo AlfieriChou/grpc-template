@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  server:
+    build:
+      context: ./server/
+    volumes:
+      - ./server/:/root/server
+      - /root/server/node_modules
+    ports:
+      - 7000:7000
+    networks:
+      - grpc-t
+
+  client:
+    build:
+      context: ./client/
+    volumes:
+      - ./client/:/root/client
+      - /root/client/node_modules
+    depends_on:
+      - server
+    networks:
+      - grpc-t
+
+networks:
+  grpc-t:
+    driver: bridge
