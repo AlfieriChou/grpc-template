@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@types/node@11.11.3":
-  version "11.11.3"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.11.3.tgz#7c6b0f8eaf16ae530795de2ad1b85d34bf2f5c58"
+"@types/node@11.12.0":
+  version "11.12.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.12.0.tgz#ec5594728811dc2797e42396cfcdf786f2052c12"
 
 abbrev@1:
   version "1.1.1"
@@ -1562,7 +1562,7 @@ nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
 
-node-pre-gyp@*, node-pre-gyp@^0.12.0:
+node-pre-gyp@^0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.12.0.tgz#39ba4bb1439da030295f899e3b520b7785766149"
   dependencies:
