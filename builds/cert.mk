@@ -11,6 +11,10 @@ protogen:
 		--ts_out="service=true:$(OUT_DIR)" \
 		--proto_path ${PROTO_DIR} ${PROTO_DIR}/*.proto
 
+protolint:
+	@protoc \
+		--lint_out=sort_imports:${PROTO_DIR} ${PROTO_DIR}/*.proto
+
 cert:
 	@echo "remove certs folder ..."
 	@rm -rf ${CERT_DIR}
