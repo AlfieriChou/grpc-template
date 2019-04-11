@@ -894,10 +894,10 @@ google-protobuf@^3.5.0:
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/google-protobuf/-/google-protobuf-3.7.0.tgz#5c7228b68d24a7c93706c1a44efdb8ee883cea43"
 
-grpc-tools@1.7.2:
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/grpc-tools/-/grpc-tools-1.7.2.tgz#e49943de0c91c28ceba7d9d2c77c604a05d9e010"
-  integrity sha512-ogiyD6v3pXH/x17iaXWjSTGR5yN8bUZdn4ZcRknGOBiO/usulDhq0iWD3UFI4r5lAthq0Y62pGA+vaiLUfa6FQ==
+grpc-tools@1.7.3:
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/grpc-tools/-/grpc-tools-1.7.3.tgz#db682246d30274653db7fb19ba6a4efd04ef2496"
+  integrity sha512-PBNuL5z6c0HW0KetkvcHPnNyaSvBU63I5FnWX6izR/iBJmsKDI+NXfQRJjuKTF7sdyBqFf2k9xGIhVDUG9MUlQ==
   dependencies:
     node-pre-gyp "^0.12.0"
 
